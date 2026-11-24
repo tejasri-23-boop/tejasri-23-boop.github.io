@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tejasri's futuristic B.Tech student portfolio">
+  <title>Tejasri | Futuristic Portfolio</title>
+  <style>
+    :root {
+      --bg: #070b18;
+      --panel: rgba(17, 27, 53, .72);
+      --cyan: #55f3ff;
+      --violet: #a78bfa;
+      --text: #edf5ff;
+      --muted: #aab8d1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(72, 91, 220, .25), transparent 32%),
+        radial-gradient(circle at 85% 75%, rgba(0, 224, 255, .16), transparent 30%),
+        var(--bg);
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .22;
+      background-image: linear-gradient(rgba(85,243,255,.12) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(85,243,255,.12) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+    nav {
+      max-width: 1100px; margin: auto; padding: 25px 7%;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { color: var(--cyan); font-weight: 800; letter-spacing: 3px; }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 22px; font-size: .9rem; }
+    nav a:hover { color: var(--cyan); }
+    main { max-width: 1100px; margin: auto; padding: 65px 7% 90px; }
+    .hero { min-height: 55vh; display: flex; flex-direction: column; justify-content: center; }
+    .tag {
+      color: var(--cyan); text-transform: uppercase; letter-spacing: 4px;
+      font-size: .78rem; font-weight: bold;
+    }
+    h1 { font-size: clamp(3.2rem, 10vw, 6.8rem); line-height: .98; margin: 18px 0; }
+    h1 span {
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .intro { max-width: 600px; color: var(--muted); font-size: 1.15rem; line-height: 1.8; }
+    .button {
+      display: inline-block; margin-top: 22px; padding: 13px 22px;
+      border: 1px solid var(--cyan); border-radius: 7px; color: var(--cyan);
+      text-decoration: none; width: fit-content; box-shadow: 0 0 22px rgba(85,243,255,.12);
+    }
+    .button:hover { background: rgba(85,243,255,.1); }
+    section { margin-top: 65px; }
+    h2 { font-size: 1.8rem; margin-bottom: 22px; }
+    h2 span { color: var(--cyan); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 18px; }
+    .card {
+      background: var(--panel); border: 1px solid rgba(117, 154, 220, .22);
+      border-radius: 14px; padding: 24px; backdrop-filter: blur(12px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.18);
+    }
+    .card h3 { margin-top: 0; color: var(--cyan); }
+    .card p { color: var(--muted); line-height: 1.65; margin-bottom: 0; }
+    .skill {
+      display: inline-block; padding: 9px 13px; margin: 5px;
+      border: 1px solid rgba(85,243,255,.35); border-radius: 20px;
+      color: #dffcff; background: rgba(85,243,255,.07); font-size: .92rem;
+    }
+    footer { text-align: center; padding: 28px 15px; color: var(--muted); border-top: 1px solid rgba(117,154,220,.18); }
+    @media (max-width: 600px) {
+      nav { padding: 20px 6%; } nav a { margin-left: 10px; font-size: .8rem; }
+      main { padding: 45px 6% 70px; } .hero { min-height: 48vh; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">T<span style="color:#a78bfa">.</span></div>
+    <div><a href="#about">About</a><a href="#skills">Skills</a><a href="#education">Education</a></div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <div class="tag">Welcome to my digital space</div>
+      <h1>Hi, I'm<br><span>Tejasri.</span></h1>
+      <p class="intro">A B.Tech student exploring technology, building new skills, and turning creative ideas into meaningful digital experiences.</p>
+      <a class="button" href="#about">Explore my portfolio&nbsp; ↗</a>
+    </div>
+
+    <section id="about">
+      <h2><span>01.</span> About Me</h2>
+      <div class="card">
+        <p>Hello! I'm Tejasri. I am pursuing a Bachelor of Technology (B.Tech). I enjoy learning new technologies, solving problems, and improving my abilities step by step. I'm excited to grow as a technology professional.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2><span>02.</span> Education</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Bachelor of Technology</h3>
+          <p><strong>Qualification:</strong> B.Tech<br><strong>Status:</strong> Student</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2><span>03.</span> Skills & Interests</h2>
+      <div class="card">
+        <span class="skill">C Programming</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Communication</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Teamwork</span>
+        <p style="margin-top:18px">These are starter skills and interests. Update this section as you learn and gain experience.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Tejasri · Designed with a futuristic vision</footer>
+</body>
+</html>
